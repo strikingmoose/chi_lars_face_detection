@@ -104,18 +104,8 @@ resource "aws_default_security_group" "main_vpc_security_group" {
 //    key_name = "${var.myKeyPair}"
 //}
 
-// Amazon Linux Deep Learning Ami /////////////////////////////////
-//resource "aws_instance" "test" {
-//    ami           = "ami-c58c1dd3"
-//    instance_type = "t2.medium"
-//    security_groups = ["${aws_default_security_group.main_vpc_security_group.id}"]
-//    subnet_id = "${aws_subnet.main_vpc_subnet.id}"
-//    associate_public_ip_address = true
-//    key_name = "${var.myKeyPair}"
-//}
-
 resource "aws_spot_instance_request" "aws_deep_learning_custom_spot" {
-    ami           = "ami-45fdf753"
+    ami           = "ami-4b44745d"
     spot_price    = "0.20"
     instance_type = "p2.xlarge"
     security_groups = ["${aws_default_security_group.main_vpc_security_group.id}"]
