@@ -44,8 +44,8 @@ crashlytics.properties
 crashlytics-build.properties
 fabric.properties
 
-photos
-images
-videos
-test.py
+photos/*
+images/*
+videos/*
+test.py/*
 notebook/.ipynb_checkpoints
